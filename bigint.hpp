@@ -50,6 +50,10 @@ class BigInt
         *this = *this + val;
         return *this;
     }
+    bool operator==(const BigInt &val)
+    {
+        return number == val.number;
+    }
 };
 
 std::ostream &operator<<(std::ostream &out, const BigInt &b)
@@ -61,4 +65,3 @@ std::ostream &operator<<(std::ostream &out, const BigInt &b)
     return out;
 }
 #endif
-
